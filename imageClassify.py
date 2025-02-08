@@ -119,9 +119,9 @@ if __name__ == "__main__":
 	#check class labels
 	print(trainDataset.class_to_idx)
 
-	model = NeuralNetwork(numInputs = 3, numOutputs = 9)	#the dataset has 2 features and 2 classes
+	model = NeuralNetwork(numInputs = 3, numOutputs = 10)	#the dataset has 2 features and 2 classes
 
-	model.load_state_dict(torch.load("imageClassifygen4.pth"))
+	#model.load_state_dict(torch.load("imageClassifygen4.pth"))
 
 
 	device = torch.device("cpu")	#defines a device that defaults to the GPU
@@ -130,7 +130,7 @@ if __name__ == "__main__":
 
 	optimizer = torch.optim.SGD(model.parameters(), lr=0.01, momentum=0.9)	#the optimizer needs to know which parameters to optimize
 
-	#train(5, optimizer, trainLoader)
+	train(10, optimizer, trainLoader)
 
 	print(computeAccuracy(model, testLoader))
 

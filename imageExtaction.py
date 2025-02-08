@@ -27,7 +27,7 @@ import cv2
 import os
 
 
-for i in range(9):
+for i in range(10):
 	os.makedirs(f"dataset/train/class_{i}", exist_ok=True)
 
 for i in range(len(images)):
@@ -44,7 +44,7 @@ filename = "t10k-labels.idx1-ubyte"
 with open(filename, "rb") as f:	#extracting labels
 	labels = idx2numpy.convert_from_file(f)	#convert from bin to numpy array
 
-for i in range(9):
+for i in range(10):
 	os.makedirs(f"dataset/test/class_{i}", exist_ok=True)
 
 for i in range(len(images)):
