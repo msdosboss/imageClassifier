@@ -1,4 +1,4 @@
-This is a program that allows you to draw and number and then have you number catagorized by a CNN
+This is a program that allows you to draw a number and then have you number catagorized by a CNN
 <br/>
 To run this program enter these commands in to your terminal
 <br/>
